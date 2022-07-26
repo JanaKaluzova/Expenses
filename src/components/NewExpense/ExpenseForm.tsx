@@ -27,7 +27,7 @@ export const ExpenseForm = (props: Props) => {
     event.preventDefault()
     const expenseData = {
       title: enteredTitle,
-      amount: Number.parseInt(enteredAmount),
+      amount: Number(enteredAmount),
       date: new Date(enteredDate),
     }
     props.onSaveExpenseData(expenseData)

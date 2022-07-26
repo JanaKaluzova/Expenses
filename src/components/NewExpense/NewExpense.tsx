@@ -16,7 +16,7 @@ export const NewExpense = (props: Props) => {
   const saveExpenseDataHandler = (enteredExpenseData: EnteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
-      id: Math.random().toString(),
+      id: new Date().getTime().toString(),
     }
     props.onAddExpense(expenseData)
   }
