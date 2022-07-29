@@ -4,6 +4,7 @@ import { EnteredExpenseData } from './NewExpense'
 
 export type Props = {
   onSaveExpenseData: (exData: EnteredExpenseData) => void
+  onCancel: () => void
 }
 
 export const ExpenseForm = (props: Props) => {
@@ -52,6 +53,9 @@ export const ExpenseForm = (props: Props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add expense</button>
       </div>
     </form>
